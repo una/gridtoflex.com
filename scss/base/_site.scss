@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.show-code {
+  display: block;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  font-family: monospace;
+  z-index: 2;
+}
+
+.example-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-section > div {
+  padding: 1em;
+}
+
+.example-section > div:first-child {
+  flex: 2;
+}
+
+.example-section > div:nth-child(2) {
+  flex: 1;
+  max-height: 490px;
+  overflow-y: scroll;
+  background-color: #f6f6f6;
+}
+
+.example-section > div:nth-child(3) {
+  flex-basis: 100%;
+  justify-content: flex-end;
+  display: flex;
+}
