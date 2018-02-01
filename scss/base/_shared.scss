@@ -7,6 +7,14 @@ body {
     font-family: monospace;
     font-size: 20px;
     text-align: center;
+  }
+
+  .red,
+  .orange,
+  .yellow,
+  .green,
+  .blue,
+  .purple {
     // This is just styling the text in the boxes to be centered
     display: flex;
     align-items: center;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +7,49 @@
 html, body {
   width: 100%;
   height: 100%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  display: flex;
+  font-size: 2.5rem;
+  padding: 1rem;
+  align-items: start;
+  position: relative;
+  color: white;
+
+  span {
+    border: 4px solid black;
+    padding: 0 1rem;
+  }
+
+  span:nth-child(2){
+    font-size: 2rem;
+    border-left: none;
+    border-right: none;
+  }
+
+  span:nth-child(3){
+    flex: 1;
+    font-size: 4rem;
+    max-width: 700px;
+  }
+
+  &::after {
+    content: '';
+    background: linear-gradient(145deg, #fd5c3f, #ff00c0);
+    display: block;
+    width: 100%;
+    height: 4rem;
+    top: 2rem;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+  }
 }
 
 .page-wrapper {
@@ -62,7 +107,7 @@ html, body {
 
 .example-section > div:nth-child(2) {
   flex: 1;
-  max-height: 460px;
+  height: calc(#{var(--headerHeight)} + #{var(--middleHeight)} + #{var(--footerHeight)});
   overflow-y: scroll;
   
 }
@@ -71,4 +116,19 @@ html, body {
   flex-basis: 100%;
   justify-content: flex-end;
   display: flex;
+}
+
+.intro-text-area {
+  display: flex;
+
+  p:first-child {
+    flex: 2;
+    padding-right: 3em;
+  }
+
+  p:last-child {
+    flex: 1;
+    border: 1px dashed gray;
+    padding: 1em;
+  }
 }
