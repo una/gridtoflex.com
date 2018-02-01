@@ -18,6 +18,9 @@ html, body {
   font-size: 1.2rem;
   font-family: monospace;
   z-index: 2;
+  padding: 1em;
+  background-color: #f6f6f6;
+
 }
 
 .example-section {
@@ -25,19 +28,43 @@ html, body {
   flex-wrap: wrap;
 }
 
-.example-section > div {
-  padding: 1em;
+.example-section .container {
+  resize: horizontal;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: transparent transparent black transparent;
+    cursor: pointer;
+  }
+  &::before {
+    content: 'resize me!';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    display: block;
+  }
 }
 
 .example-section > div:first-child {
   flex: 2;
+  padding-right: 1em;
 }
 
 .example-section > div:nth-child(2) {
   flex: 1;
-  max-height: 490px;
+  max-height: 460px;
   overflow-y: scroll;
-  background-color: #f6f6f6;
+  
 }
 
 .example-section > div:nth-child(3) {

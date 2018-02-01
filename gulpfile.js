@@ -59,7 +59,7 @@ gulp.task('deploy', function () {
 
 gulp.task('js', function() {
   gulp.src('js/*.js')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(concat('j.js'))
     .pipe(gulp.dest('dist/js'))
