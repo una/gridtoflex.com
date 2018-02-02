@@ -10,12 +10,12 @@
     <h1><span>Grid</span><span>to</span><span>Flex</span></h1>
     <h2>Flexbox fallbacks for popular UI solutions that use CSS Grid.</h2>
     <div class="intro-text-area">
-      <p>CSS grid is AMAZING! However, if you need to support users of IE11 and below, or Edge 15 and below, grid won't really work as you expect. This site is a solution for you so you can start to progressively enhance without fear!<br><br>
+      <p>CSS grid is AMAZING! However, if you need to support users of IE11 and below, or Edge 15 and below, grid won't really work as you expect (more info <a href="https://www.youtube.com/watch?v=7msERxu7ivg&t=157s">here</a>). This site is a solution for you so you can start to progressively enhance without fear!<br><br>
         
       Things to Note: CSS grid allows for specified styling using the vertical area as well as horizontal. Flexbox doesn't allow for this, so we'll be using fixed heights in these examples. Also, because of how much power grid gives us, some of these are not the most elegant markup you could use when writing with grid-only. They are instead all solutions that allow for a flexbox fallback without changing markup, so you can progressively enhance your user's experience.<br><br>
         
       The components would also take the height of the internal elements. Feel free to play around with the CSS. To swap between implementations, use the toggles. You can also play with these in Codepen (which may have better syntax highlighting!).</p>
-      <p>The code blocks are fully editable, and you can update the shared variables here, too!<br><br>
+      <p>The code blocks are fully editable, and you can update the shared variables here, too (but note that browsers which don't support grid also don't support variables, so use this only for understanding, and absolute values in prod!)<br><br>
       <style class="show-code" contenteditable="true">:root {
   --headerHeight: 60px;
   --middleHeight: 300px;
@@ -24,6 +24,8 @@
     </div>
 
     <hr/>
+
+    <h2>Page Layouts</h2>
 
     <h3>Example 1: Embedded Sidebar</h3>
 
@@ -71,6 +73,57 @@
         <button class="both-button">Show Both</button>
       </div>
     </div>
+
+    <h3>Dynamic Grids</h3>
+
+    <h3>Example 3: Endless Box Grid with Full Alignment</h3>
+
+    <div class="example-section ex3">
+      <div class="example-area">
+        <div class="container">
+          <div class="red">1</div>
+          <div class="orange">2</div>
+          <div class="yellow">3</div>
+          <div class="green">4</div>
+          <div class="blue">5</div>
+          <div class="purple">6</div>
+        </div>
+        <a href="https://codepen.io/una/pen/31912d73a9970dc8cde5f5046110e23f" class="codepen-link">Explore on CodePen</a>
+      </div>
+      <div class="code-area">
+        <style class="show-code both" contenteditable="true"></style>
+      </div>
+      <div class="button-area">
+        <button class="flex-button">Toggle Flexbox</button>
+        <button class="grid-button">Toggle Grid</button>
+        <button class="both-button">Show Both</button>
+      </div>
+    </div>
+
+    <h3>Example 3: Endless Box Grid with Stretched Items</h3>
+
+    <div class="example-section ex4">
+      <div class="example-area">
+        <div class="container">
+          <div class="red">1</div>
+          <div class="orange">2</div>
+          <div class="yellow">3</div>
+          <div class="green">4</div>
+          <div class="blue">5</div>
+          <div class="purple">6</div>
+        </div>
+        <a href="https://codepen.io/una/pen/31912d73a9970dc8cde5f5046110e23f" class="codepen-link">Explore on CodePen</a>
+      </div>
+      <div class="code-area">
+        <style class="show-code both" contenteditable="true"></style>
+      </div>
+      <div class="button-area">
+        <button class="flex-button">Toggle Flexbox</button>
+        <button class="grid-button">Toggle Grid</button>
+        <button class="both-button">Show Both</button>
+      </div>
+    </div>
+
   </div>
 </body>
 <script src="js/j.js"></script>
