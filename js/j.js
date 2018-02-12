@@ -200,7 +200,7 @@ const ex2_FullSolution = `/* Grid Implementation */
   }
 }`;
 
-const ex2_FlexSolution =`/* Flex Implementation */
+const ex2_GridSolution =`/* Grid Implementation */
 
 .ex2 .container {
   display: grid;
@@ -241,7 +241,7 @@ const ex2_FlexSolution =`/* Flex Implementation */
   grid-area: 👠;
 }`;
 
-const ex2_GridSolution =`/* Grid Implementation */
+const ex2_FlexSolution =`/* Flex Implementation */
 
 .ex2 .container {
   display: flex;
@@ -277,6 +277,83 @@ const ex2_GridSolution =`/* Grid Implementation */
   height: var(--footerHeight);
 }`;
 
+const ex3_FullSolution = `/* Grid Implementation */
+
+@supports (display: grid) {
+  .ex3 .container {
+    display: grid;
+    grid-template-columns: repeat(var(--columnRepeat), 1fr);
+  }
+  
+  .ex3 .container > div {
+    flex: 1;
+  }
+}
+
+/* Flexbox Fallback */
+
+@supports not (display: grid) {
+  .ex3 .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ex3 .container > div {
+    flex: 1;
+    flex-basis: calc(100% / var(--columnRepeat));
+  }
+}`;
+const ex3_FlexSolution = `/* Flex Implementation */
+
+.ex3 .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ex3 .container > div {
+  flex-basis: calc(100% / var(--columnRepeat));
+}`;
+const ex3_GridSolution = `/* Grid Implementation */
+
+.ex3 .container {
+  display: grid;
+  grid-template-columns: repeat(var(--columnRepeat), 1fr);
+}`;
+const ex4_GridSolution = `/* Grid Solution */
+
+.ex4 .yellow {
+  display: grid;
+  grid-template: 
+      '📝 👾 💁🏻‍' /
+      auto 1fr auto;
+  height: var(--headerHeight);
+  width: 100%;
+}
+
+.ex4 .green {
+  grid-area: 📝;
+}
+
+.ex4 .blue + .blue{
+  margin-left: 1em;
+}
+
+.ex4 .orange {
+  grid-area: 💁🏻‍;
+}`
+const ex4_FlexSolution = `/* Flex Solution */
+
+.ex4 .yellow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: var(--headerHeight);
+}
+
+.ex4 .blue + .blue {
+  margin-left: 1em;
+}`
+
 // Events
 
 document.querySelector('.ex1 .flex-button').addEventListener('click', function() {
@@ -303,7 +380,32 @@ document.querySelector('.ex2 .both-button').addEventListener('click', function()
     codeContent = ex2_FullSolution;
   updateCodeContent(codeContent, 'ex2');
 });
+document.querySelector('.ex3 .flex-button').addEventListener('click', function() {
+  codeContent = ex3_FlexSolution;
+  updateCodeContent(codeContent, 'ex3');
+});
+document.querySelector('.ex3 .grid-button').addEventListener('click', function() {
+    codeContent = ex3_GridSolution;
+    updateCodeContent(codeContent, 'ex3');
+});
+document.querySelector('.ex3 .both-button').addEventListener('click', function() {
+    codeContent = ex3_FullSolution;
+  updateCodeContent(codeContent, 'ex3');
+});
+document.querySelector('.ex4 .flex-button').addEventListener('click', function() {
+  codeContent = ex4_FlexSolution;
+  updateCodeContent(codeContent, 'ex4');
+});
+document.querySelector('.ex4 .grid-button').addEventListener('click', function() {
+    codeContent = ex4_GridSolution;
+    updateCodeContent(codeContent, 'ex4');
+});
+document.querySelector('.ex4 .both-button').addEventListener('click', function() {
+    codeContent = ex4_FullSolution;
+  updateCodeContent(codeContent, 'ex4');
+});
 
 // Initial setup for Ex1
 updateCodeContent(ex1_FullSolution, 'ex1');
 updateCodeContent(ex2_FullSolution, 'ex2');
+updateCodeContent(ex3_FullSolution, 'ex3');
