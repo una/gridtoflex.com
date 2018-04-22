@@ -16,7 +16,7 @@ const ex1_FlexSolution = `/* Flex Implementation */
 
 .ex1 .red {
   flex-basis: 100%;
-  height: var(--headerHeight);
+  height: 60px;
 }
 
 .ex1 .orange {
@@ -38,7 +38,7 @@ const ex1_GridSolution =`/* Grid Implementation */
 .ex1 .container {
   display: grid;
   grid-template: 
-    '😁  😁' var(--headerHeight)
+    '😁  😁' 60px
     '🐒  📝' var(--middleHeight)
     '👠  👠' var(--footerHeight) /
     1fr 3fr ;
@@ -66,7 +66,7 @@ const ex1_FullSolution =`/* Grid Implementation */
   .ex1 .container {
     display: grid;
     grid-template: 
-        '😁  😁' var(--headerHeight)
+        '😁  😁' 60px
         '🐒  📝' var(--middleHeight)
         '👠  👠' var(--footerHeight) /
         1fr 3fr ;
@@ -99,7 +99,7 @@ const ex1_FullSolution =`/* Grid Implementation */
 
   .ex1 .red {
     flex-basis: 100%;
-    height: var(--headerHeight);
+    height: 60px;
   }
 
   .ex1 .orange {
@@ -125,7 +125,7 @@ const ex2_FullSolution = `/* Grid Implementation */
   .ex2 .container {
     display: grid;
     grid-template: 
-      '🐒  📝' var(--headerHeight)
+      '🐒  📝' 60px
       '🐒  📝' var(--middleHeight)
       '🐒  📝' var(--footerHeight) /
       1fr 3fr ;
@@ -143,7 +143,7 @@ const ex2_FullSolution = `/* Grid Implementation */
     grid-area: 📝;
     display: grid;
     grid-template: 
-      '😁' var(--headerHeight)
+      '😁' 60px
       '💛' var(--middleHeight)
       '👠' var(--footerHeight) /
       100% ;
@@ -186,7 +186,7 @@ const ex2_FullSolution = `/* Grid Implementation */
   
   .ex2 .red {
     flex-basis: 100%;
-    height: var(--headerHeight);
+    height: 60px;
   }
 
   .ex2 .yellow {
@@ -205,7 +205,7 @@ const ex2_GridSolution =`/* Grid Implementation */
 .ex2 .container {
   display: grid;
   grid-template: 
-    '🐒  📝' var(--headerHeight)
+    '🐒  📝' 60px
     '🐒  📝' var(--middleHeight)
     '🐒  📝' var(--footerHeight) /
     1fr 3fr ;
@@ -223,7 +223,7 @@ const ex2_GridSolution =`/* Grid Implementation */
   grid-area: 📝;
   display: grid;
   grid-template: 
-    '😁' var(--headerHeight)
+    '😁' 60px
     '💛' var(--middleHeight)
     '👠' var(--footerHeight) /
     100% ;
@@ -264,7 +264,7 @@ const ex2_FlexSolution =`/* Flex Implementation */
 
 .ex2 .red {
   flex-basis: 100%;
-  height: var(--headerHeight);
+  height: 60px;
 }
 
 .ex2 .yellow {
@@ -282,7 +282,7 @@ const ex3_FullSolution = `/* Grid Implementation */
 @supports (display: grid) {
   .ex3 .container {
     display: grid;
-    grid-template-columns: repeat(var(--columnRepeat), 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   
   .ex3 .container > div {
@@ -300,7 +300,7 @@ const ex3_FullSolution = `/* Grid Implementation */
   
   .ex3 .container > div {
     flex: 1;
-    flex-basis: calc(100% / var(--columnRepeat));
+    flex-basis: calc(100% / 4);
   }
 }`;
 const ex3_FlexSolution = `/* Flex Implementation */
@@ -311,13 +311,13 @@ const ex3_FlexSolution = `/* Flex Implementation */
 }
 
 .ex3 .container > div {
-  flex-basis: calc(100% / var(--columnRepeat));
+  flex-basis: calc(100% / 4);
 }`;
 const ex3_GridSolution = `/* Grid Implementation */
 
 .ex3 .container {
   display: grid;
-  grid-template-columns: repeat(var(--columnRepeat), 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }`;
 const ex4_GridSolution = `/* Grid Solution */
 
@@ -326,7 +326,7 @@ const ex4_GridSolution = `/* Grid Solution */
   grid-template: 
       '📝 👾 💁🏻‍' /
       auto 1fr auto;
-  height: var(--headerHeight);
+  height: 60px;
   width: 100%;
 }
 
@@ -347,7 +347,7 @@ const ex4_FlexSolution = `/* Flex Solution */
   display: flex;
   width: 100%;
   justify-content: space-between;
-  height: var(--headerHeight);
+  height: 60px;
 }
 
 .ex4 .blue + .blue {

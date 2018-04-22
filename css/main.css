@@ -103,7 +103,7 @@ h1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-height: calc(var(--headerHeight) + var(--middleHeight) + var(--footerHeight));
+  max-height: 460px;
   overflow-y: scroll; }
 
 .example-section > div:nth-child(3) {
@@ -242,7 +242,7 @@ ol {
   padding: 0; }
 
 .container {
-  height: calc(var(--headerHeight) + var(--middleHeight) + var(--footerHeight));
+  height: calc(460px);
   background-color: #f6f6f6; }
 
 .ex4 .container .red {
