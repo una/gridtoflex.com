@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800|Work+Sans');
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #ff00c0;
+  position: relative;
+  margin-left: -2rem;
+
+  &::after {
+    content: '';
+    background: linear-gradient(145deg, yellow, #ff7d7d);
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    top: 2.5rem;
+    left: 2rem;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+h3 {
+  margin-top: 3rem;
+}
+
+.intro-text-area h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+p {
+  color: #444
+}
+
+h1 {
+  display: flex;
+  font-size: 2.5rem;
+  padding: 1rem;
+  align-items: start;
+  position: relative;
+  color: white;
+
+  span {
+    border: 4px solid black;
+    padding: 0 1rem;
+  }
+
+  span:nth-child(2){
+    font-size: 2rem;
+    border-left: none;
+    border-right: none;
+  }
+
+  span:nth-child(3){
+    flex: 1;
+    font-size: 4rem;
+    max-width: 700px;
+  }
+
+  &::after {
+    content: '';
+    background: linear-gradient(145deg, #fd5c3f, #ff00c0);
+    display: block;
+    width: 100%;
+    height: 4rem;
+    top: 2rem;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+.page-wrapper {
+  max-width: 1100px;
+  padding: 0 2rem 2rem;
+  margin: 0 auto;
+}
+
+.show-code {
+  display: block;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
+  font-family: monospace;
+  z-index: 2;
+  padding: 1em;
+  background-color: #f6f6f6;
+
+}
+
+.example-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-section .container {
+  resize: horizontal;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 30px 30px;
+    border-color: transparent transparent black transparent;
+    cursor: pointer;
+  }
+  &::before {
+    content: 'resize me!';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    display: block;
+  }
+}
+
+.codepen-link {
+  color: #c380c3;
+  margin-top: -2rem;
+}
+
+.example-section > div:nth-child(2) {
+  flex: 1;
+  max-height: 460px;
+  overflow-y: scroll;
+}
+
+.example-section > div:nth-child(3) {
+  flex-basis: 100%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+@media (max-width: 760px) {
+  .example-section > div:first-child,
+  .example-section > div:nth-child(2) {
+    flex-basis: 100%;
+  }
+
+  .example-section > div:first-child a {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .example-section > div:first-child {
+    padding-right: 0;
+  }
+
+  .example-section > div:nth-child(3){
+    justify-content: center;
+  }
+  
+  .codepen-link {
+    margin: 0.5rem auto;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.intro-text-area {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  border: 1px dashed gray;
+  padding: 1rem 2rem;
+}
+
+.grids .container div {
+  min-height: 150px;
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 0;
+  margin: .25rem .5rem;
+  cursor: pointer;
+}
+
+button > div {
+  width: 100%;
+  display: block;
+  transition-duration: .5s;
+}
+
+button > div:first-child {
+  background: white;
+  border: 2px dashed #a6eaa6;
+  padding: .25em .5em;
+}
+
+button > div:last-child {
+  background: #c380c3;;
+  height: 1.6em;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+button:hover > div:last-child {
+  transform: translate(5px, 7px);
+}
+
+button:hover > div:first-child {
+  transform: translate(-5px, -7px);
+}
+
+@media (min-width: 760px) {
+  .page-wrapper {
+    padding: 0 3rem 3rem;
+  }
+  .example-area {
+    min-width: 50%;
+    margin-right: 1rem;
+  }
+}
+
+footer {
+  border-top: 2px dashed #ff00c0;
+  text-align: center;
+  background: #eee;
+  padding: 2rem;
+}
+
+footer p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer a,
+footer span {
+  color: #ff00c0;
+}
