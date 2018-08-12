@@ -23,7 +23,7 @@
     "gulp-sass-lint": "^1.1.1",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.0",
-    "imagemin-pngquant": "^5.0.1",
+    "imagemin-pngquant": "^6.0.0",
     "jshint": "^2.9.1"
   }
 }
